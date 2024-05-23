@@ -1,0 +1,104 @@
+Setting Up LAMP Stack on AZURE:
+
+Setting up a LAMP stack (Linux, Apache, MySQL, PHP) on Azure involves several steps,
+including creating a virtual machine (VM), installing the necessary software, and configuring the stack.
+
+Here is a step-by-step guide to help you through the process:
+
+STEP 1.Create a Virtual Machine on Azure:
+
+Log in to the Azure Portal:
+Go to portal.azure.com and log in with your credentials.
+
+Create a New VM:
+Click on "Create a resource" and select "Virtual Machine".
+Choose the appropriate settings:
+Subscription: Select your subscription.
+Resource Group: Create a new resource group or select an existing one.
+VM Name: Enter a name for your VM.
+Region: Choose a region close to you.
+Image: Select Ubuntu Server (preferably the latest LTS version).
+Size: Choose a size that meets your requirements.
+
+Authentication:
+Select "SSH public key" for SSH login or "Password" if you prefer using a password.
+Configure other necessary settings (e.g., inbound ports for SSH).
+
+Networking and Storage:
+Configure the networking settings as required.
+Leave other settings at their default values unless you have specific requirements.
+
+Review and Create:
+Review the VM settings and click "Create". Azure will take a few minutes to deploy your VM.
+
+Step 2: Connect to Your VM
+SSH into Your VM:
+Open your terminal or SSH client.
+Use the following command to connect to your VM:
+
+ssh <your-username>@<your-vm-public-ip>
+
+STEP 3.Install Components:
+
+Install Apache
+Update Package List:
+
+sudo apt update
+
+Install Apache:
+
+sudo apt install apache2 -y
+
+Start and Enable Apache:
+
+sudo systemctl start apache2
+sudo systemctl enable apache2
+
+Adjust Firewall:
+Allow HTTP traffic through the firewall:
+
+sudo ufw allow in "Apache"
+
+Install MySQL:
+
+sudo apt install mysql-server -y
+
+Secure MySQL Installation:
+
+sudo mysql_secure_installation
+
+Follow the prompts to configure MySQL security settings.
+
+Install PHP and Extensions:
+
+sudo apt install php libapache2-mod-php php-mysql -y
+
+STEP 4.Start services
+Restart Apache:
+
+sudo systemctl restart apache2
+
+STEP 5.Test LAMP Stack:
+Create and access a PHP info file to verify stack operatiION
+
+Create a PHP Info Page:
+Create a PHP file in the web root directory: -
+
+sudo nano /var/www/html/info.php
+
+Add the following content:
+
+php
+Copy code
+<?php
+phpinfo();
+?>
+
+Save and exit the editor.
+
+Access the PHP Info Page:
+Open your web browser and navigate to http://<your-vm-public-ip>/info.php.
+
+voila!!
+
+You should see the PHP information page, indicating that PHP is working correctly.
