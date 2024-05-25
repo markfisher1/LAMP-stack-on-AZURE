@@ -64,7 +64,7 @@ STEP 3.Install Components:
 
 Install Apache:
 
-sudo apt install apache2 -y
+sudo apt install apache2
 
 Start and Enable Apache:
 
@@ -78,7 +78,7 @@ sudo ufw allow in "Apache"
 
 Install MySQL:
 
-sudo apt install mysql-server -y
+sudo apt install mysql-server
 
 Secure MySQL Installation:
 
@@ -88,7 +88,7 @@ Follow the prompts to configure MySQL security settings.
 
 Install PHP and Extensions:
 
-sudo apt install php libapache2-mod-php php-mysql -y
+sudo apt install php libapache2-mod-php php-mysql
 
 STEP 4.Start services
 Initiate Apache and MySQL services to ensure functionality.
@@ -97,7 +97,7 @@ Restart Apache:
 sudo systemctl restart apache2
 
 Restart MySQL:
-sudo systemctl restart mysqld
+sudo systemctl restart mysql
 
 STEP 5.Test LAMP Stack:
 Create and access a PHP info file to verify stack operatiION
