@@ -1,11 +1,15 @@
-Setting Up LAMP Stack on AZURE:
+# Setting Up LAMP Stack on AZURE:
 
-Setting up a LAMP stack (Linux, Apache, MySQL, PHP) on Azure involves several steps,
+# Setting up a LAMP stack (Linux, Apache, MySQL, PHP) on Azure involves several steps,
 including creating a virtual machine (VM), installing the necessary software, and configuring the stack.
+
+
 
 Here is a step-by-step guide to help you through the process:
 
-STEP 1.Create a Virtual Machine on Azure:
+
+
+# STEP 1.Create a Virtual Machine on Azure:
 
 Log in to the Azure Portal:
 Go to portal.azure.com and log in with your credentials.
@@ -40,7 +44,8 @@ Leave other settings at their default values unless you have specific requiremen
 Review and Create:
 Review the VM settings and click "Create". Azure will take a few minutes to deploy your VM.
 
-Step 2: Connect to Your VM via CLI
+
+# Step 2: Connect to Your VM via CLI
 
 i. ON YOUR COMMAND PROMPT Connect to Instance:
 Establish SSH connection to the VM --
@@ -60,7 +65,8 @@ update to the latest version by running the command -
 
 sudo apt update
 
-STEP 3.Install Components:
+
+# STEP 3.Install Components:
 
 Install Apache:
 
@@ -90,7 +96,8 @@ Install PHP and Extensions:
 
 sudo apt install php libapache2-mod-php php-mysql
 
-STEP 4.Start services
+
+# STEP 4.Start services
 Initiate Apache and MySQL services to ensure functionality.
 
 Restart Apache:
@@ -99,7 +106,8 @@ sudo systemctl restart apache2
 Restart MySQL:
 sudo systemctl restart mysql
 
-STEP 5.Test LAMP Stack:
+
+# STEP 5.Test LAMP Stack:
 Create and access a PHP info file to verify stack operatiION
 
 Create a PHP Info Page:
