@@ -51,7 +51,8 @@ i. ON YOUR COMMAND PROMPT Connect to Instance:
 Establish SSH connection to the VM --
 
 cd "path to your key file" for eg- cd C:\Users\NAME\linux key  (remember to put the cd command before the path)
-then, click enter and copy and paste your AZURE CONSOLE SSH, its found when you click on your VM name and click on connect, 
+then, click enter and copy and paste your AZURE CONSOLE SSH,
+ its found when you click on your VM name and click on connect, 
 under the 'connect to VM' page click on the SSH client and you will find your VM public DNS that
 looks like this az ssh vm --resource-group krystal_group --vm-name krystal --subscription b7e6d027-5a13-4ec9-ae33-10e9a7e0ce13
                    
@@ -61,7 +62,7 @@ ii. TO CONNECT to your VM VIA YOUR AZURE CLI [BASH OR POWERSHELL (UBUNTU)]-
 ON YOUR AZURE CONSOLE click on your VM name and cick on 'connect',
 It will validate, configure and then click on connect.
 
-update to the latest version by running the command - 
+update to the latest version by running the command:
 
 sudo apt update
 
